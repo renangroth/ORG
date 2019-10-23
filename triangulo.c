@@ -2,21 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 long int ST_2(int n, int k){
- 	long int a;
- 	if(n > 1){
- 		a = k*ST_2(n-1, k) + ST_2(n-1, k-1);
- 	}
- 	else if(k>1){
- 		a = 0;
- 	}
- 	else{
- 		a = 1;
- 	}	
- 	printf("n= %d\n", n);
- 	printf("k= %d\n", k);
- 	printf("resposta= %ld\n", a);
- 	return a;
+     long int a;
+     if (n == 1){
+         if(k == 1)
+             return 1;
+         else
+             return 0;
+
+     }
+    else{
+         a = k*ST_2(n-1, k) + ST_2(n-1, k-1);
+     }
+    
+     printf("n= %d\n", n);
+     printf("k= %d\n", k);
+     printf("resposta= %ld\n", a);
+     return a;
 }
+
+
 
 main(){
 	int k=0,n=0;
