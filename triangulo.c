@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 long int ST_2(int n, int k){
      long int a;
      if (n == 1){
